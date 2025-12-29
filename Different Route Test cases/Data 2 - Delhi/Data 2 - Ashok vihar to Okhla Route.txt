@@ -1,0 +1,30 @@
+#Here we are inputing the Addresses we need to geocode:
+loc = [['Ashok Vihar, Phase 1, 110052'],['Chandni Chowk, Delhi 110006'],['Patparganj, Delhi 110092 '],['Lodhi Road, New Delhi, Delhi 110003'],['Nehru Nagar, New Delhi, Delhi 110065'],['Sri Aurobindo Marg, Delhi 110016'],['Okhla Phase II, Delhi 110020']]
+
+#(1)FOR GREEN ROUTE: Weighted Adjacent Matrix for the individual locations that we enetered For Pollution (matrix size should be same to number of addresses):
+gmat = [[0,-5, 0,0, 0, 0, 0 ],
+        [-5, 0, 5, 3, 3, 0, 0 ],
+        [0, 5, 0, 0, -2, 0, 0],
+        [0, 3, 0, 0, 0, -3, -1],
+        [0, 3, -2, 0, 0, 0, -1],
+        [0, 0, 0, -3, 0, 0, 2],
+        [0, 0, 0, -1,-1, 2, 0]]
+
+
+#(2)FOR YELLOW ROUTE: Weighted Adjacent Matrix for the individual locations that we enetered For Shortest distance (matrix size should be same to number of addresses):
+lmat = [[0, 10, 0, 0, 0, 0, 0],
+         [10, 0, 9, 9, 14, 0, 0],
+         [0, 9, 0, 0, 14, 0, 0],
+         [0, 9, 0, 0, 6, 5, 11],
+         [0, 14, 14, 6, 0, 0, 7],
+         [0, 0, 0, 5, 0, 0, 11],
+         [0, 0, 0, 11, 7, 11, 0]]
+
+#(3)FOR BLUE ROUTE: Weighted Adjacent Matrix for the individual locations that we enetered For FastestTime (matrix size should be same to number of addresses):
+tmat = [[0, 17, 0, 0, 0, 0, 0],
+         [17, 0, 15, 15, 23, 0, 0],
+         [0, 15, 0, 0, 23, 0, 0],
+         [0, 15, 0, 0, 10, 8, 18],
+         [0, 23, 23, 10, 0, 0, 11],
+         [0, 0, 0, 8, 0, 0, 18],
+         [0, 0, 0, 18, 11, 18, 0]]

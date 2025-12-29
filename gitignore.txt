@@ -1,0 +1,16 @@
+# Virtual Environments
+venv/
+.venv/
+env/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+
+# Environment Variables (Sensitive Info)
+.env
+
+# Distribution / Packaging
+dist/
+build/
+*.egg-info/

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_32038ff5bf8cb2c48b62d4464485a9c7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_32038ff5bf8cb2c48b62d4464485a9c7" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_32038ff5bf8cb2c48b62d4464485a9c7 = L.map(
+                "map_32038ff5bf8cb2c48b62d4464485a9c7",
+                {
+                    center: [28.8466591, 77.0859312],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 14,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_67a168e9d729e9412b83deb674d19564 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_67a168e9d729e9412b83deb674d19564.addTo(map_32038ff5bf8cb2c48b62d4464485a9c7);
+        
+    
+            var poly_line_6885692aaf978653245123b1560375ac = L.polyline(
+                [[28.8466591, 77.0859312], [28.8457212, 77.0862041], [28.845854, 77.0867968], [28.8459467, 77.0871145], [28.8462554, 77.0881732], [28.8463706, 77.0885655], [28.8463912, 77.0886359], [28.8458536, 77.0888426], [28.8452444, 77.0890439], [28.845195, 77.0890606], [28.8445926, 77.0892645], [28.8439199, 77.0894953], [28.8435896, 77.0896568], [28.8434421, 77.0897302], [28.8430151, 77.0898556], [28.8423375, 77.0900708], [28.8409475, 77.0904894], [28.8405126, 77.0906585], [28.8396628, 77.0909943], [28.8360921, 77.0921938], [28.8360702, 77.0923915], [28.8354572, 77.0924729], [28.8354191, 77.0924264], [28.8324151, 77.0935709], [28.8323234, 77.0936138], [28.8307563, 77.0942555], [28.8304062, 77.0943663], [28.8292215, 77.0946023], [28.8281359, 77.0949791], [28.8276424, 77.0953238], [28.8275935, 77.0953367], [28.8273873, 77.0957115], [28.8268217, 77.0967243], [28.8265289, 77.0971846], [28.8243363, 77.0991785], [28.8207819, 77.1009792], [28.8176861, 77.1025451], [28.8163273, 77.1031861], [28.8162459, 77.1032293], [28.8141242, 77.1045271], [28.8140899, 77.1045481], [28.8136129, 77.1047545], [28.8096526, 77.1072128], [28.8094145, 77.1073616], [28.8067835, 77.1092519], [28.8066904, 77.109434], [28.8033752, 77.1120936], [28.8032293, 77.1120693], [28.8023451, 77.1127625], [28.8013434, 77.1135735], [28.7967135, 77.1176398], [28.7969482, 77.1189397], [28.7970666, 77.1193459], [28.7970701, 77.1193675], [28.7971512, 77.1208227], [28.7978604, 77.124196], [28.7979055, 77.1255146], [28.7979544, 77.1267954], [28.7979805, 77.1274042], [28.7979933, 77.1276293], [28.7979951, 77.1279303], [28.7979496, 77.12849], [28.7979205, 77.1287006], [28.7978446, 77.1291796], [28.7976778, 77.130248], [28.7976089, 77.1306865], [28.7975423, 77.1311834], [28.7974028, 77.1317498], [28.7973725, 77.1318316], [28.7972666, 77.132679], [28.7972175, 77.1331436], [28.797105, 77.134267], [28.7970852, 77.1353576], [28.797062, 77.1364835], [28.7970586, 77.1365669], [28.7970413, 77.1380772]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_32038ff5bf8cb2c48b62d4464485a9c7);
+        
+    
+            var marker_21d810ffc6f09b161c402a381ad4913f = L.marker(
+                [28.8464766, 77.0856631],
+                {
+}
+            ).addTo(map_32038ff5bf8cb2c48b62d4464485a9c7);
+        
+    
+            var icon_ecc5270f4d749928a2f79fae2e62a40b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4e8807ba87b8ec1fd703371af45da1bd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_07925b3cd22d34a89a4f44f5e8b24c18 = $(`<div id="html_07925b3cd22d34a89a4f44f5e8b24c18" style="width: 100.0%; height: 100.0%;">Narela Delhi</div>`)[0];
+                popup_4e8807ba87b8ec1fd703371af45da1bd.setContent(html_07925b3cd22d34a89a4f44f5e8b24c18);
+            
+        
+
+        marker_21d810ffc6f09b161c402a381ad4913f.bindPopup(popup_4e8807ba87b8ec1fd703371af45da1bd)
+        ;
+
+        
+    
+    
+                marker_21d810ffc6f09b161c402a381ad4913f.setIcon(icon_ecc5270f4d749928a2f79fae2e62a40b);
+            
+    
+            var marker_cebc82b3d98a9ae89426fafe83f3bffb = L.marker(
+                [28.8465, 77.0857],
+                {
+}
+            ).addTo(map_32038ff5bf8cb2c48b62d4464485a9c7);
+        
+    
+            var div_icon_e236ea191cf4d2d141e11dbcee3e3d86 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: black;\"\u003eNarela Delhi\u003c/div\u003e",
+  "iconSize": [400, 400],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_cebc82b3d98a9ae89426fafe83f3bffb.setIcon(div_icon_e236ea191cf4d2d141e11dbcee3e3d86);
+            
+    
+            var poly_line_48bbfb1f9f29f4344e1e4a419e0ed8dc = L.polyline(
+                [[28.7970413, 77.1380772], [28.7970262, 77.1393872], [28.7969819, 77.1393924], [28.7963427, 77.139467], [28.7956512, 77.1395477], [28.7939365, 77.1397479], [28.7936536, 77.1397809], [28.7935923, 77.1397877], [28.7926401, 77.1398941], [28.7900033, 77.1401715], [28.7890587, 77.1402683], [28.787182, 77.1404703], [28.7867151, 77.1405142], [28.7834438, 77.1409119], [28.782651, 77.1410453], [28.7822918, 77.1410833], [28.7812908, 77.141271], [28.7808879, 77.1413581], [28.7809509, 77.1419168], [28.7788166, 77.1424302], [28.7727637, 77.1437147], [28.7719613, 77.1438649], [28.7718947, 77.1438783], [28.7709477, 77.1440915], [28.7700635, 77.14437], [28.7680905, 77.1450096], [28.7585547, 77.1481342], [28.7529876, 77.1499609], [28.7522051, 77.1502126], [28.750866, 77.1505538], [28.7505786, 77.1505198], [28.7391484, 77.1542307], [28.7389558, 77.1542968], [28.7386582, 77.1543862], [28.7365001, 77.1548247], [28.7360162, 77.1551599], [28.7344045, 77.1563469], [28.7325705, 77.1578154], [28.7319837, 77.1582657], [28.7313035, 77.1587997], [28.7313803, 77.1589418], [28.7307438, 77.1594152], [28.7304197, 77.1596574], [28.7299808, 77.159985], [28.7297621, 77.1601483], [28.7288244, 77.1608486], [28.7284673, 77.1611152], [28.7278716, 77.16156], [28.7270422, 77.1621794], [28.7262964, 77.1627411]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_32038ff5bf8cb2c48b62d4464485a9c7);
+        
+    
+            var marker_d7c8d76f8b5105905e862c625c6f7944 = L.marker(
+                [28.7973118, 77.138667],
+                {
+}
+            ).addTo(map_32038ff5bf8cb2c48b62d4464485a9c7);
+        
+    
+            var icon_e12fa6763cdd28723d3bf9049af25e71 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_528d04f8d94bdffebdfcb4c97a2df61e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_665e26405e0496c85c1bccf9b1b23ca8 = $(`<div id="html_665e26405e0496c85c1bccf9b1b23ca8" style="width: 100.0%; height: 100.0%;">Alipur Delhi</div>`)[0];
+                popup_528d04f8d94bdffebdfcb4c97a2df61e.setContent(html_665e26405e0496c85c1bccf9b1b23ca8);
+            
+        
+
+        marker_d7c8d76f8b5105905e862c625c6f7944.bindPopup(popup_528d04f8d94bdffebdfcb4c97a2df61e)
+        ;
+
+        
+    
+    
+                marker_d7c8d76f8b5105905e862c625c6f7944.setIcon(icon_e12fa6763cdd28723d3bf9049af25e71);
+            
+    
+            var marker_60a5e828d626708d93813b55b4fd6c86 = L.marker(
+                [28.7973, 77.1387],
+                {
+}
+            ).addTo(map_32038ff5bf8cb2c48b62d4464485a9c7);
+        
+    
+            var div_icon_7d8dabeffa5739499b2c793064950943 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: black;\"\u003eAlipur Delhi\u003c/div\u003e",
+  "iconSize": [400, 400],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_60a5e828d626708d93813b55b4fd6c86.setIcon(div_icon_7d8dabeffa5739499b2c793064950943);
+            
+    
+            var poly_line_b1be160c43411efa9aeffc726008b39b = L.polyline(
+                [[28.7262964, 77.1627411], [28.7256188, 77.1632361], [28.7252155, 77.1635374], [28.7246064, 77.1639758], [28.7245481, 77.1640203], [28.7231401, 77.165083], [28.7226883, 77.1654005], [28.7221627, 77.1658118], [28.7219274, 77.16588], [28.7202251, 77.1674016], [28.7201373, 77.1674784], [28.719854, 77.1677171], [28.7196095, 77.1679357], [28.719408, 77.1681158], [28.7186267, 77.1687986], [28.7181397, 77.1692231], [28.7176468, 77.1696529], [28.7171643, 77.1700851], [28.7170167, 77.1702173], [28.7155949, 77.1714041], [28.714907, 77.1720241], [28.7135866, 77.1732133], [28.7124538, 77.1742775], [28.7124047, 77.1743236], [28.711628, 77.175074], [28.7114953, 77.1751921], [28.7108358, 77.1757789], [28.7106939, 77.1759052], [28.710406, 77.1761812], [28.7101802, 77.1763768], [28.7099343, 77.1765575], [28.7097386, 77.1767545], [28.7082217, 77.1781244], [28.7078905, 77.1790005], [28.7063778, 77.1841255], [28.7054797, 77.1870435], [28.7045633, 77.1897376], [28.7025424, 77.1948262], [28.7025325, 77.1948522], [28.702412, 77.1951873], [28.7023734, 77.195288], [28.7016184, 77.1973212], [28.701475, 77.1977073], [28.6989231, 77.2046704], [28.6988855, 77.2047673], [28.6987521, 77.2050622], [28.6980052, 77.2071131], [28.6979093, 77.2073831], [28.697872, 77.2074879], [28.6971121, 77.2095124], [28.6966862, 77.2106322], [28.696401, 77.2113886], [28.6962971, 77.2116689], [28.6957575, 77.2131139], [28.6956661, 77.2130648], [28.6944386, 77.2124462], [28.6932933, 77.211889], [28.6928879, 77.2126239], [28.6922062, 77.2144526], [28.6914704, 77.2163398], [28.6890903, 77.2151976]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_32038ff5bf8cb2c48b62d4464485a9c7);
+        
+    
+            var marker_70e7e69c1a661b50e71ae74dd811c394 = L.marker(
+                [28.7259717, 77.162658],
+                {
+}
+            ).addTo(map_32038ff5bf8cb2c48b62d4464485a9c7);
+        
+    
+            var icon_531af72ff847eb3d202e4a9a9da1c4c7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2d17a8760278e25aaf6a62144bcd7800 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d29eee850e88d262aa158ff551a0be42 = $(`<div id="html_d29eee850e88d262aa158ff551a0be42" style="width: 100.0%; height: 100.0%;">Jahangirpuri Delhi</div>`)[0];
+                popup_2d17a8760278e25aaf6a62144bcd7800.setContent(html_d29eee850e88d262aa158ff551a0be42);
+            
+        
+
+        marker_70e7e69c1a661b50e71ae74dd811c394.bindPopup(popup_2d17a8760278e25aaf6a62144bcd7800)
+        ;
+
+        
+    
+    
+                marker_70e7e69c1a661b50e71ae74dd811c394.setIcon(icon_531af72ff847eb3d202e4a9a9da1c4c7);
+            
+    
+            var marker_25fa362c5f34fbcb8c39cf5aeb58214d = L.marker(
+                [28.726, 77.1627],
+                {
+}
+            ).addTo(map_32038ff5bf8cb2c48b62d4464485a9c7);
+        
+    
+            var div_icon_2403fe2be37525cdd3829e2183c946ea = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: black;\"\u003eJahangirpuri Delhi\u003c/div\u003e",
+  "iconSize": [400, 400],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_25fa362c5f34fbcb8c39cf5aeb58214d.setIcon(div_icon_2403fe2be37525cdd3829e2183c946ea);
+            
+    
+            var marker_fc6369993e9c5f65b357fd965db78e66 = L.marker(
+                [28.84, 77.0857],
+                {
+}
+            ).addTo(map_32038ff5bf8cb2c48b62d4464485a9c7);
+        
+    
+            var div_icon_5f6d0159fd12ae03b4ae637679dfff71 = L.divIcon({
+  "html": "\u003cbr\u003e \u003cdiv style=\"font-size: 10pt; color: blue;\"\u003eFastest Route:   24.48 km, Time: 35 mins\u003c/div\u003e\u003cbr\u003e",
+  "iconSize": [400, 400],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_fc6369993e9c5f65b357fd965db78e66.setIcon(div_icon_5f6d0159fd12ae03b4ae637679dfff71);
+            
+    
+            var marker_c40e23991ab0737ccaab433ea0533f2c = L.marker(
+                [28.689099, 77.2134707],
+                {
+}
+            ).addTo(map_32038ff5bf8cb2c48b62d4464485a9c7);
+        
+    
+            var icon_3e2b23df708889a69500282b073c2f4b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e5253167e3306dcc29a8587ecaf61509 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_25c297233a06966d2df8238e3a721e01 = $(`<div id="html_25c297233a06966d2df8238e3a721e01" style="width: 100.0%; height: 100.0%;">North Campus Delhi</div>`)[0];
+                popup_e5253167e3306dcc29a8587ecaf61509.setContent(html_25c297233a06966d2df8238e3a721e01);
+            
+        
+
+        marker_c40e23991ab0737ccaab433ea0533f2c.bindPopup(popup_e5253167e3306dcc29a8587ecaf61509)
+        ;
+
+        
+    
+    
+                marker_c40e23991ab0737ccaab433ea0533f2c.setIcon(icon_3e2b23df708889a69500282b073c2f4b);
+            
+    
+            var marker_2af6230619e9b4ccc4e9b63f7e3192e5 = L.marker(
+                [28.6891, 77.2135],
+                {
+}
+            ).addTo(map_32038ff5bf8cb2c48b62d4464485a9c7);
+        
+    
+            var div_icon_93a6ac78d3aa8b6138729ce29319b1fa = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; color: black;\"\u003eNorth Campus Delhi\u003c/div\u003e",
+  "iconSize": [400, 400],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_2af6230619e9b4ccc4e9b63f7e3192e5.setIcon(div_icon_93a6ac78d3aa8b6138729ce29319b1fa);
+            
+</script>
+</html>
