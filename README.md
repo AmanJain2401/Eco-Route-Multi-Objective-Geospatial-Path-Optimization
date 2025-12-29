@@ -58,7 +58,7 @@ Negative Cycle Detection: For the Green route, the script checks for negative cy
 The script produces several visual outputs:  
 1. **Interactive HTML Maps**  
 AllRoutesmap.html: A master map displaying Green, Yellow, and Blue routes simultaneously with markers.  
-![EcoRoute AllMAps](docs/AllMApOutput.jpg)
+![EcoRoute AllMAps](docs/AllMapOutput.jpg)
 
 ```bash
 GreenRouteMap.html: Detailed view of the least polluted path.
