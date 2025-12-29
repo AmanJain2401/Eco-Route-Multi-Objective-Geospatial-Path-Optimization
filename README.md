@@ -58,7 +58,7 @@ Negative Cycle Detection: For the Green route, the script checks for negative cy
 The script produces several visual outputs:  
 1. **Interactive HTML Maps**  
 AllRoutesmap.html: A master map displaying Green, Yellow, and Blue routes simultaneously with markers.  
-![EcoRoute Architecture](docs/AllMApOutput.jpg)
+![EcoRoute AllMAps](docs/AllMApOutput.jpg)
 
 ```bash
 GreenRouteMap.html: Detailed view of the least polluted path.
@@ -67,7 +67,7 @@ BlueRouteMap.html: Detailed view of the fastest time path.
 ```
 2. **Static Graphs**  
 The script saves three PNG files (GreenRouteGraph.png, etc.) showing the abstract network topology, edge weights, and the selected path highlighted in the respective color.  
-![EcoRoute Architecture](docs/GreenRouteGraph.png)
+![EcoRoute Graph](docs/GreenRouteGraph.png)
 
 3. **Console Statistics**  
 The console outputs the precise distance (in km) and estimated travel time (in minutes) for every calculated route.  
